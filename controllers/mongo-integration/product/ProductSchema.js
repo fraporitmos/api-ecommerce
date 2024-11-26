@@ -7,4 +7,7 @@ export const ProductSchema = new mongoose.Schema({
     stock: Number,
     category: { type: mongoose.Schema.Types.ObjectId, ref: "Category" },
     images: String
-});
+},{
+    versionKey: false 
+ });
+
