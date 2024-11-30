@@ -11,4 +11,4 @@ router.post("/product", CreateProduct)
 router.put("/product", UpdateProduct)
 router.delete("/product", DeleteProduct)
 
-module.exports = router
+module.exports = router 
