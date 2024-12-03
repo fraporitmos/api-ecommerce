@@ -1,2 +1,2 @@
-const PASSWORD = "FrapoDeveloper*2024"
-export const BASE_URL = `mongodb+srv://root:${PASSWORD}@cluster0.cfif9.mongodb.net/`
+const PASSWORD = ""
+export const BASE_URL = `mongodb+srv://root:${PASSWORD}@ecommerce.m0625.mongodb.net/`

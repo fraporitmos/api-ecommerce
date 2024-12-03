@@ -1,13 +1,11 @@
 const myslConection = require("../conection/mysqlConnection")
 
-const getUsers = async (req, res) => {
-
+const getOrders = async (req, res) => {
     try {
-        const result = await myslConection.query("SELECT * FROM users")
+        const result = await myslConection.query("SELECT  ODRS.products from ordenes ODRS")
         if(result.length > 0){
             res.status(200).json({
-                msg: "success",
-                users: result
+                result
             });
         }else{
             res.status(200).json({
@@ -23,4 +21,4 @@ const getUsers = async (req, res) => {
     }
 }
 
-module.exports = {getUsers}
+module.exports = {getOrders}

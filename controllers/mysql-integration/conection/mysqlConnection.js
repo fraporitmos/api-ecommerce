@@ -8,7 +8,7 @@ connection.getConnection((err, conn)=>{
         console.log(`Base de datos no conectada ${err}`)
     }else{
         if(conn) conn.release()
-        console.log(`Base de datos conectada con éxito.`)
+        console.log(`✅ Base de datos conectada con éxito.`)
         return
     }
 })
