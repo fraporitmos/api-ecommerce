@@ -21,10 +21,9 @@ const GetProductsCart = async (req, res) => {
     const cart = await cartModel.findById(_id)
     
     if(cart){
-        //$in indica el operador de mongo db para selecionar todas colecciones donde sus valores hagan match con el array de  cart.arrayProductsId
-
+        //TODO: pendiente acorreguir
+        console.log(cart.arrayProductsId)
         const products = await productsModel.find({
-            //Este _id  pertenece a la coleccion de products
             _id: {$in: cart.arrayProductsId}
         })
 

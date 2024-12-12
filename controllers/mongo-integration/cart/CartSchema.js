@@ -1,10 +1,14 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-export const CartSchema = new mongoose.Schema({
-    arrayProductsId: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
-    coupon: {type:String, default: "NONE"},
-    status: {type:String, default:"CREATED"}
- },{
-    versionKey: false 
- });
+const CartSchema = new mongoose.Schema({
+  arrayProductsId: [
+    {
+      productId: { type: mongoose.Schema.Types.ObjectId,rrequired: true },
+      quantity: { type: Number, required: true, default: 1 },
+    },
+  ],
+  coupon: { type: String, default: null },
+  status: { type: String, default: "active" },
+});
 
+module.exports = { CartSchema };
