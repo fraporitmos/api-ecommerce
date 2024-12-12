@@ -3,8 +3,8 @@ const { CartSchema } = require("./CartSchema");
 const { BASE_URL } = require("../../../env/Constants");
 
 const AddProductToCart = async (req, res) => {
-  const { _id, arrayProductsId, coupon, status } = req.body;
-
+  const { _id, productId, count} = req.body;
+  //TODO: modificar el servicio
   try {
     await mongoose.connect(BASE_URL);
     const cartModel = mongoose.model("cart", CartSchema);
